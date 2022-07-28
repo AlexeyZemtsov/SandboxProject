@@ -1,4 +1,4 @@
-﻿namespace ThirdApp;
+﻿namespace SandboxApp;
 
 public static class MauiProgram
 {

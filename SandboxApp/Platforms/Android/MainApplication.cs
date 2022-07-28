@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ThirdApp;
+namespace SandboxApp;
 
 [Application]
 public class MainApplication : MauiApplication

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ThirdApp;
+namespace SandboxApp;
 
 public class Program
 {

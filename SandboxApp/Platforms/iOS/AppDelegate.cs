@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ThirdApp;
+namespace SandboxApp;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate
