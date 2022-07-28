@@ -42,6 +42,18 @@
                 SemanticProperties.Hint="Открывает карты"
                 Clicked="OnMapsClicked"
                 HorizontalOptions="Center" />
+            <Button
+                x:Name="CalcBtn"
+                Text="Открыть калькулятор"
+                SemanticProperties.Hint="Открывает калькулятор"
+                Clicked="OnCalcClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="UrlBtn"
+                Text="Открыть URL"
+                SemanticProperties.Hint="Открывает URL"
+                Clicked="OnURLClicked"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>

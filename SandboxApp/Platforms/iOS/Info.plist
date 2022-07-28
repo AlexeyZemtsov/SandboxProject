@@ -33,6 +33,21 @@
     	<string>calc</string>  
     	<string>camera</string>
     	<string>maps</string>
+    	<string>sandbox-app</string>
 	</array>
+	
+	<key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>sandbox</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>sandbox-app</string>
+            </array>
+        </dict>
+    </array>
+	
+	
 </dict>
 </plist>

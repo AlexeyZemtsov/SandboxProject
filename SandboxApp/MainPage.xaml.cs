@@ -28,6 +28,26 @@ public partial class MainPage : ContentPage
             await Launcher.Default.OpenAsync("maps://");
 
     }
+    private async void OnCalcClicked(object sender, EventArgs e)
+    {
+        bool supportsUri = await Launcher.Default.CanOpenAsync("calc://");
+
+        if (supportsUri)
+            await Launcher.Default.OpenAsync("calc://");
+        else
+            CalcBtn.Text = $"Нет калькулятора";
+
+    }
+    private async void OnURLClicked(object sender, EventArgs e)
+    {
+        bool supportsUri = await Launcher.Default.CanOpenAsync("sandbox-app://");
+
+        if (supportsUri)
+            await Launcher.Default.OpenAsync("sandbox-app://ridetype?id=lyft_line");
+        else
+            CalcBtn.Text = $"Нет URL";
+
+    }
 }
 
 
