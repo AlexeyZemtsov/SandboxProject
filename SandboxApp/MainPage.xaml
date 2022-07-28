@@ -35,6 +35,14 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+
+            <Button
+                x:Name="MapsBtn"
+                Text="Открыть карты"
+                SemanticProperties.Hint="Открывает карты"
+                Clicked="OnMapsClicked"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 

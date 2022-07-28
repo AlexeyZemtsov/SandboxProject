@@ -26,5 +26,11 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+    	<string>calc</string>  
+    	<string>camera</string>
+    	<string>maps</string>
+	</array>	
 </dict>
 </plist>
