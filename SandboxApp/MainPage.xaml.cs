@@ -8,7 +8,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        //CalcBtn.Text = state.Field1;
+        CalcBtn.Text = State.GetState().Field1;
     }
 
     private void OnCounterClicked(object sender, EventArgs e)
@@ -30,16 +30,12 @@ public partial class MainPage : ContentPage
             await Launcher.Default.OpenAsync("maps://");
 
     }
-    private async void OnCalcClicked(object sender, EventArgs e)
+
+    private void OnCalcClicked(object sender, EventArgs e)
     {
-        bool supportsUri = await Launcher.Default.CanOpenAsync("calc://");
-
-        if (supportsUri)
-            await Launcher.Default.OpenAsync("calc://");
-        else
-            CalcBtn.Text = $"Нет калькулятора";
-
+        CalcBtn.Text = State.GetState().Field1;
     }
+
     private async void OnURLClicked(object sender, EventArgs e)
     {
         bool supportsUri = await Launcher.Default.CanOpenAsync("sandbox-app://");
