@@ -7,6 +7,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+
+        //CalcBtn.Text = state.Field1;
     }
 
     private void OnCounterClicked(object sender, EventArgs e)
@@ -43,10 +45,15 @@ public partial class MainPage : ContentPage
         bool supportsUri = await Launcher.Default.CanOpenAsync("sandbox-app://");
 
         if (supportsUri)
-            await Launcher.Default.OpenAsync("sandbox-app://ridetype?id=lyft_line");
+            await Launcher.Default.OpenAsync("sandbox-app://ridetype?first=1111&second=2222");
         else
             CalcBtn.Text = $"Нет URL";
 
+    }
+
+    public void UpdateCalcBtn(string newLabel)
+    {
+        CalcBtn.Text = newLabel;
     }
 }
 

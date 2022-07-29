@@ -5,6 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
+            x:Name="MainLayout"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
@@ -42,12 +43,13 @@
                 SemanticProperties.Hint="Открывает карты"
                 Clicked="OnMapsClicked"
                 HorizontalOptions="Center" />
+
             <Button
                 x:Name="CalcBtn"
-                Text="Открыть калькулятор"
                 SemanticProperties.Hint="Открывает калькулятор"
                 Clicked="OnCalcClicked"
                 HorizontalOptions="Center" />
+
             <Button
                 x:Name="UrlBtn"
                 Text="Открыть URL"
