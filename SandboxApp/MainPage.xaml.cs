@@ -2,12 +2,14 @@
 
 public partial class MainPage : ContentPage
 {
-    string name1 = "Name1";
-    string value1 = "Value1";
-    string name2 = "Name2";
-    string value2 = "Value2";
-    string name3 = "Name3";
-    string value3 = "Value3";
+    // for debug
+    string name1 = "Name11";
+    string value1 = "Value11";
+    string name2 = "Name12";
+    string value2 = "Value12";
+    string name3 = "Name13";
+    string value3 = "Value13";
+    string host = "SandApp";
 
     public MainPage()
     {
@@ -36,16 +38,33 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void OnCalcClicked(object sender, EventArgs e)
+    private void OnTestClicked(object sender, EventArgs e)
     {
-        OutputLabel.Text = State.GetState().Field1;
+        string Name1 = State.GetState().FieldName1;
+        string Value1 = State.GetState().FieldValue1;
+        string Name2 = State.GetState().FieldName2;
+        string Value2 = State.GetState().FieldValue2;
+        string Name3 = State.GetState().FieldName3;
+        string Value3 = State.GetState().FieldValue3;
+
+        string SummText = String.Concat(State.GetState().Field1, "  host ", State.GetState().FieldHost, " ",
+            Name1, " ", Value1);
+        OutputLabel.Text = SummText;
+
+        LabelName1.Text = Name1;
+        LabelValue1.Text = Value1;
+        LabelName2.Text = Name2;
+        LabelValue2.Text = Value2;
+        LabelName3.Text = Name3;
+        LabelValue3.Text = Value3;
+
 
     }
 
     private async void OnURLClicked(object sender, EventArgs e)
     {
         //"sandbox-app://ridetype?first=1111&second=2222"
-        string host = "ridetype";
+
 
         bool supportsUri = await Launcher.Default.CanOpenAsync("sandbox-app://");
 
@@ -61,36 +80,10 @@ public partial class MainPage : ContentPage
 
     }
 
-    public void UpdateCalcBtn(string newLabel)
-    {
-        OutputLabel.Text = newLabel;
-    }
-
-    public void CompletedName1(object sender, EventArgs e)
-    {
-        name1 = ((Entry)sender).Text;
-    }
-    public void CompletedValue1(object sender, EventArgs e)
-    {
-        value1 = ((Entry)sender).Text;
-    }
-    public void CompletedName2(object sender, EventArgs e)
-    {
-        name2 = ((Entry)sender).Text;
-    }
-    public void CompletedValue2(object sender, EventArgs e)
-    {
-        value2 = ((Entry)sender).Text;
-    }
-    public void CompletedName3(object sender, EventArgs e)
-    {
-        name3 = ((Entry)sender).Text;
-    }
-    public void CompletedValue3(object sender, EventArgs e)
-    {
-        value3 = ((Entry)sender).Text;
-    }
-
+    //public void UpdateCalcBtn(string newLabel)
+    //{
+    //    OutputLabel.Text = newLabel;
+    //}
 
 }
 

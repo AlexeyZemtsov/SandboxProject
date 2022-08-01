@@ -44,9 +44,28 @@ public static class MauiProgram
                     foreach (NSUrlQueryItem item in components.QueryItems)
                     {
                         parameters.Add(item.Name, item.Value);
+
                     }
 
                     state.Field1 = url.ToString();
+                    state.FieldHost = host;
+
+                    List<KeyValuePair<string, string>> theList = new List<KeyValuePair<string, string>>(parameters);
+                    state.FieldName1 = theList[0].Key;
+                    state.FieldValue1 = theList[0].Value;
+
+                    state.FieldName2 = theList[1].Key;
+                    state.FieldValue2 = theList[1].Value;
+                    state.FieldName3 = theList[2].Key;
+                    state.FieldValue3 = theList[2].Value;
+
+
+                    //for (int i = 0; i < theList.Count; i++)
+                    //{
+                    //    // the key
+                    //    Console.WriteLine(theList[i].Key);
+                    //}
+
 
                     return true;
                 }

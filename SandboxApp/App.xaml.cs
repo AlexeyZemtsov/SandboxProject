@@ -20,6 +20,7 @@ public partial class App : Application
 
         System.Diagnostics.Debug.WriteLine($"========== Opened a window, {state.Field1}");
 
+
         return window;
     }
 }
