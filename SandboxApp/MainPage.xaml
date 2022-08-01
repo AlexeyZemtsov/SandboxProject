@@ -3,7 +3,156 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SandboxApp.MainPage">
 
-    <ScrollView>
+
+    <Grid
+         RowDefinitions="2*, .20*, .20*, .20*,.20*, .20*, .20*,.20*,*,*"
+          ColumnDefinitions=".50*, .50*"
+          Padding="10">
+
+            <Image Grid.ColumnSpan="2"
+                Source="paragraph.png"
+                SemanticProperties.Description="Old Paragraph"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Name1"
+                SemanticProperties.HeadingLevel="Level1"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Entry
+                   x:Name="Name1"
+                   Placeholder="Enter Name1"
+                   Completed="CompletedName1"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label
+                Text="Value1"
+                SemanticProperties.HeadingLevel="Level2"
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <Entry
+                   x:Name="Value1"
+                   Placeholder="Enter Value1"
+                   Completed="CompletedValue1"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label
+                Text="Name2"
+                SemanticProperties.HeadingLevel="Level3"
+                Grid.Row="3"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Entry
+                   x:Name="Name2"
+                   Placeholder="Enter Name2"
+                   Completed="CompletedName2"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label
+                Text="Value2"
+                SemanticProperties.HeadingLevel="Level4"
+                Grid.Row="4"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <Entry
+                   x:Name="Value2"
+                   Placeholder="Enter Value2"
+                   Completed="CompletedValue2"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label
+                Text="Name3"
+                SemanticProperties.HeadingLevel="Level5"
+                Grid.Row="5"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Entry
+                   x:Name="Name3"
+                   Placeholder="Enter Name3"
+                   Completed="CompletedName2"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label
+                Text="Value3"
+                SemanticProperties.HeadingLevel="Level6"
+                Grid.Row="6"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <Entry
+                   x:Name="Value3"
+                   Placeholder="Enter Value3"
+                   Completed="CompletedValue3"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label
+                x:Name="OutputLabel"
+                Text="output string"
+                SemanticProperties.HeadingLevel="Level6"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <Button
+                x:Name="CalcBtn"
+                Grid.Row="8"
+                Grid.Column="1"
+                Text="Test"
+                SemanticProperties.Hint="Открывает калькулятор"
+                Clicked="OnCalcClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+             <Button
+                x:Name="MapsBtn"
+                Grid.Row="8"
+                Grid.Column="0"
+                Text="Открыть карты"
+                SemanticProperties.Hint="Открывает карты"
+                Clicked="OnMapsClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Button
+                x:Name="UrlBtn"
+                Text="Открыть URL"
+                Grid.ColumnSpan="2"
+                Grid.Row="9"
+                SemanticProperties.Hint="Открывает URL"
+                Clicked="OnURLClicked"
+                HorizontalOptions="Center" />
+
+
+    </Grid>
+
+
+
+    <!--<ScrollView>
         <VerticalStackLayout
             x:Name="MainLayout"
             Spacing="25"
@@ -58,7 +207,7 @@
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
-    </ScrollView>
+    </ScrollView>-->
 
 </ContentPage>
 
