@@ -23,6 +23,7 @@ public static class MauiProgram
 #if IOS
                 events.AddiOS(ios => ios
                     .OpenUrl(OpenUrlDelegate)
+                    .OnActivated((app) => LogEvent("==================>OnActivate"))
                 );
 #endif
 
